@@ -26,7 +26,7 @@ class AppFixtures extends Fixture
             
             $hashed_password = $this->encoder->encodePassword($user, 'password');
 
-            $user->setEmail($faker->email)
+            $user->setEmail($faker->email())
                  ->setPassword($hashed_password);
 
             $manager->persist($user);
